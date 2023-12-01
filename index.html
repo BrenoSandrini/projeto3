@@ -3,15 +3,23 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-	<title>Projeto Faesa</title>
+	<title>Projeto Faesa2</title>
 
 	<link href="css/app.css" rel="stylesheet">
+	<link href="index.css" rel= "stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/handsontable/dist/handsontable.full.min.css" rel="stylesheet"  />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/handsontable@9.0.1/dist/handsontable.full.min.js"></script>
+
+	
+
 </head>
 
 <body>
@@ -55,20 +63,45 @@
 				</div>
 			</nav>
 			<main class="content">
-				<h1 class="h3 mb-3"><strong>Dashboard</strong> 
-					
-				<div class="container-fluid p-0">
+				<h1 class="h3 mb-3"><strong>Dashboard</strong></h1>
+				<br><br>
+				
+			
+				<div style="max-width: 1200px; margin: 0 auto; text-align: center;">
 
-						<iframe title="calorias" width="1140" height="600.25" src="https://app.powerbi.com/reportEmbed?reportId=a2ac5c11-6a74-4630-b6f6-7da44a89a9c7&autoAuth
-						=true&ctid=b9976b30-8143-4ac5-a408-f906b4062b85&filterPaneEnabled=false&navContentPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>						<div class="col-xl-6 col-xxl-7">
+					<h3 style="color: gray; text-align: left;margin-left: 135px; margin-top: -20px; margin-bottom: -30px;">Cardápio mais saudável</h3>
+					<h3 style="color: gray; text-align: right; margin-right: 135px;">Item de cardápio mais calórico</h3>
+
+					<div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+				
+						<div style="flex: 0 48%; max-width: 48%; height: 300px; position: relative; margin-bottom: 20px;">
+							<canvas id="grafico1" style="width: 100%; height: 100%;"></canvas>
+						</div>
+						
+						<div style="flex: 0 48%; max-width: 48%; height: 300px; position: relative; margin-bottom: 20px;">
+							<canvas id="grafico2" style="width: 100%; height: 100%;"></canvas>
+						</div>
+				
 					</div>
+				
+					<div style="display: flex; justify-content: left;">
+				
+						<div style="flex: 0 48%; max-width: 48%; height: 300px; position: relative; margin-bottom: 20px;">
+							<h3 style="color: gray; position: absolute;">Fonte</h3>
+							<div id="tabela" style="width: 210%;"></div>
+						</div>
+				
+					</div>
+				
 				</div>
+				
 			</main>
-
 		</div>
 	</div>
 
 	<script src="js/app.js"></script>
+	<script src="index.js"></script>
+
 </body>
 
 </html>
